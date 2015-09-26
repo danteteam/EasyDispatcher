@@ -10,6 +10,7 @@
 		2C538C481BB757FB00AA1C70 /* EasyDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C538C471BB757FB00AA1C70 /* EasyDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C538C4F1BB757FB00AA1C70 /* EasyDispatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C538C441BB757FB00AA1C70 /* EasyDispatcher.framework */; settings = {ASSET_TAGS = (); }; };
 		2C538C541BB757FB00AA1C70 /* EasyDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C538C531BB757FB00AA1C70 /* EasyDispatcherTests.swift */; };
+		2C538C5F1BB7580B00AA1C70 /* EasyDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C538C5E1BB7580B00AA1C70 /* EasyDispatcher.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		2C538C4E1BB757FB00AA1C70 /* EasyDispatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyDispatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C538C531BB757FB00AA1C70 /* EasyDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyDispatcherTests.swift; sourceTree = "<group>"; };
 		2C538C551BB757FB00AA1C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C538C5E1BB7580B00AA1C70 /* EasyDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyDispatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		2C538C461BB757FB00AA1C70 /* EasyDispatcher */ = {
 			isa = PBXGroup;
 			children = (
+				2C538C5E1BB7580B00AA1C70 /* EasyDispatcher.swift */,
 				2C538C471BB757FB00AA1C70 /* EasyDispatcher.h */,
 				2C538C491BB757FB00AA1C70 /* Info.plist */,
 			);
@@ -142,6 +145,7 @@
 		2C538C3B1BB757FA00AA1C70 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = dantelab;
 				TargetAttributes = {
@@ -193,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C538C5F1BB7580B00AA1C70 /* EasyDispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +312,7 @@
 		2C538C591BB757FB00AA1C70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dantelab.EasyDispatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2C538C5A1BB757FB00AA1C70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
