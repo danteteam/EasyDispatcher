@@ -17,6 +17,6 @@ dispatch$.async_after(.Default,     5.0) {}
 dispatch$.async_after(.High,        5.0) {}
 
 dispatch$.main {}
-dispatch$.main_sync {}          // Be carefull about this
+dispatch$.main_sync {}          // Be careful about this
 dispatch$.main_after(1.0) {}
 ```
