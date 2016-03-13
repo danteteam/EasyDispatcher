@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2C538C481BB757FB00AA1C70 /* EasyDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C538C471BB757FB00AA1C70 /* EasyDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C538C4F1BB757FB00AA1C70 /* EasyDispatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C538C441BB757FB00AA1C70 /* EasyDispatcher.framework */; settings = {ASSET_TAGS = (); }; };
+		2C538C4F1BB757FB00AA1C70 /* EasyDispatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C538C441BB757FB00AA1C70 /* EasyDispatcher.framework */; };
 		2C538C541BB757FB00AA1C70 /* EasyDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C538C531BB757FB00AA1C70 /* EasyDispatcherTests.swift */; };
-		2C538C5F1BB7580B00AA1C70 /* EasyDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C538C5E1BB7580B00AA1C70 /* EasyDispatcher.swift */; settings = {ASSET_TAGS = (); }; };
+		2C538C5F1BB7580B00AA1C70 /* EasyDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C538C5E1BB7580B00AA1C70 /* EasyDispatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +24,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C4A16E11C1B69A700848575 /* EasyDispatcher-Watch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyDispatcher-Watch.h"; sourceTree = "<group>"; };
+		2C4A16E31C1B69A700848575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C538C441BB757FB00AA1C70 /* EasyDispatcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyDispatcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C538C471BB757FB00AA1C70 /* EasyDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyDispatcher.h; sourceTree = "<group>"; };
 		2C538C491BB757FB00AA1C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,11 +54,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C4A16E01C1B69A700848575 /* EasyDispatcher-Watch */ = {
+			isa = PBXGroup;
+			children = (
+				2C4A16E11C1B69A700848575 /* EasyDispatcher-Watch.h */,
+				2C4A16E31C1B69A700848575 /* Info.plist */,
+			);
+			path = "EasyDispatcher-Watch";
+			sourceTree = "<group>";
+		};
 		2C538C3A1BB757FA00AA1C70 = {
 			isa = PBXGroup;
 			children = (
 				2C538C461BB757FB00AA1C70 /* EasyDispatcher */,
 				2C538C521BB757FB00AA1C70 /* EasyDispatcherTests */,
+				2C4A16E01C1B69A700848575 /* EasyDispatcher-Watch */,
 				2C538C451BB757FB00AA1C70 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -312,6 +324,7 @@
 		2C538C591BB757FB00AA1C70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -319,6 +332,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EasyDispatcher/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dantelab.EasyDispatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -330,6 +344,7 @@
 		2C538C5A1BB757FB00AA1C70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -337,6 +352,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EasyDispatcher/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dantelab.EasyDispatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -383,6 +399,7 @@
 				2C538C5A1BB757FB00AA1C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C538C5B1BB757FB00AA1C70 /* Build configuration list for PBXNativeTarget "EasyDispatcherTests" */ = {
 			isa = XCConfigurationList;
@@ -391,6 +408,7 @@
 				2C538C5D1BB757FB00AA1C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

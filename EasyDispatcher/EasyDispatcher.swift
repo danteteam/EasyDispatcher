@@ -28,45 +28,50 @@ public enum Priority {
     }
 }
 
+
 public struct dispatch${
     
-    public static func main(action: ()->())  {
-        dispatch_async(dispatch_get_main_queue(), action)
+    public static func main(block: dispatch_block_t)  {
+        dispatch_async(dispatch_get_main_queue(), block)
     }
-    public static func main_sync(action: ()->())  {
-        dispatch_sync(dispatch_get_main_queue(), action)
+    public static func main_sync(block: dispatch_block_t)  {
+        dispatch_sync(dispatch_get_main_queue(), block)
     }
     
-    public static func main_after(delay: NSTimeInterval, _ action: ()->()){
+    public static func main_after(delay: NSTimeInterval, _ block: dispatch_block_t){
         dispatch_after(
             convertTime(delay),
             dispatch_get_main_queue(),
-            action)
+            block)
         
     }
     
-    public static func async(priority: Priority, _ action: ()->()){
-        dispatch_async(priority.queue, action)
+    public static func async(priority: Priority, _ block: dispatch_block_t){
+        dispatch_async(priority.queue, block)
     }
     
-    public static func async_after(priority: Priority, _ delay: NSTimeInterval, _ action: ()->()){
-        dispatch_after(convertTime(delay), priority.queue, action)
+    public static func async(queue: dispatch_queue_t, block: dispatch_block_t){
+        dispatch_async(queue, block)
     }
     
-    public static func async_default(action: ()->()){
-        async(.Default, action)
+    public static func async_after(priority: Priority, _ delay: NSTimeInterval, _ block: dispatch_block_t){
+        dispatch_after(convertTime(delay), priority.queue, block)
     }
     
-    public static func async_low(action: ()->()){
-        async(.Low, action)
+    public static func async_default(block: dispatch_block_t){
+        async(.Default, block)
     }
     
-    public static func async_high(action: ()->()){
-        async(.High, action)
+    public static func async_low(block: dispatch_block_t){
+        async(.Low, block)
     }
     
-    public static func async_background(action: ()->()){
-        async(.Background, action)
+    public static func async_high(block: dispatch_block_t){
+        async(.High, block)
+    }
+    
+    public static func async_background(block: dispatch_block_t){
+        async(.Background, block)
     }
     
     private static func convertTime(time: NSTimeInterval) -> dispatch_time_t {
